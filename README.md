@@ -81,3 +81,7 @@ MIT License<br> Please read the [License](https://github.com/gokulnair2001/COVID
 
 * Still there are things to complete as well as to implement, If you find this app intresting than hit me up; I will be
 glad to work with you.
+
+# Credits ⭐️
+* ML Model Dataset credits :[kaggle](https://www.kaggle.com/datasets) 
+glad to work with you.
