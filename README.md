@@ -1,7 +1,7 @@
 # COVID-TODAY 🦠
 
 ![Badge](https://img.shields.io/badge/License-MIT-yellow) 
-![Badge](https://img.shields.io/badge/Xcode-11.6-green)
+![Badge](https://img.shields.io/badge/Xcode-12.01-green)
 ![badge](https://img.shields.io/badge/Swift-5.0-red)
 ![badge](https://img.shields.io/badge/iOS-14-blue)
 ![badge](https://img.shields.io/badge/Platfrom-iOS-orange)
