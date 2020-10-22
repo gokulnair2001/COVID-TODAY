@@ -11,7 +11,7 @@
 ![Badge](https://img.shields.io/badge/COVID-Precautions-yellow) 
 
 # Introduction ⚒  
-So COVID TODAY is an COVID detection app which uses Chest XRay of person to examine it.This app works on a ML Model which iss used to derive the desired result. Other than
+So COVID TODAY is an COVID detection App which uses Chest XRay of person to examine it.This app works on a ML Model which iss used to derive the desired result. Other than
 that the app also provides live updates of total cases in world. Even here it doesn't stops, the app even shows the worst affected areas in a Map View. The app consists 
 of various sort of option like help, diagnose, hospitalisation etc. The app even consists of in built journals which explains about the symptoms and precautions for COVID.
 The app gives you a desired result with 93% accuracy.
