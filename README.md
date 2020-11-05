@@ -77,6 +77,12 @@ MIT License<br> Please read the [License](https://github.com/gokulnair2001/COVID
 * If you face issues in any step open a new issue.
 * To fix issues: Fork this repository, make your changes and make a Pull Request. 
 
+# Like the Project ?
+If you like COVID TODAY please consider buying me a coffee 🥰
+
+[<img width="200" alt="BMC logo+wordmark - Black" src="https://user-images.githubusercontent.com/56252259/98195548-0c55fb80-1f48-11eb-8293-02131a0d908c.png">](https://www.buymeacoffee.com/gokulnair)
+
+
 # Imortant Message ✉️
 
 * Still there are things to complete as well as to implement, If you find this app intresting than hit me up; I will be
