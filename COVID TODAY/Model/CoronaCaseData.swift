@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK:- JSON Data Model
+
 struct coronaData:Decodable {
     let Global: global
     let Date: String
