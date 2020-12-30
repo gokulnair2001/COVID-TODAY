@@ -9,20 +9,23 @@ import UIKit
 import CoreML
 
 class DiagnoseViewController: UIViewController {
+    
+    //MARK:- IBOutlets
 
     @IBOutlet weak var xrayImage: UIImageView!
     @IBOutlet weak var imagelabel: UILabel!
     
     let covidDetector = COVIDDetector()
-    
     let haptic = haptickFeedback()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //xrayImage.layer.borderWidth = 1
-       // xrayImage.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        xrayImage.image = UIImage(named: "AddPhoto")
+
     }
+    
+    //MARK:- Action Outlets
     
     @IBAction func addXRay(_ sender: Any) {
         imageSelectionMode()
@@ -32,8 +35,16 @@ class DiagnoseViewController: UIViewController {
         haptic.haptiFeedback1()
     }
     @IBAction func examineBtn(_ sender: Any) {
-        imageClassifier()
-        haptic.haptiFeedback1()
+        
+        if xrayImage.image == UIImage(named: "AddPhoto"){
+            let alert = UIAlertController(title: "Add Image!", message: "No image found.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else{
+            imageClassifier()
+            haptic.haptiFeedback1()
+        }
+       
     }
 }
 
