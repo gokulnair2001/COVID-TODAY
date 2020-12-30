@@ -165,9 +165,6 @@ extension MainViewController{
         for location in locations {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude: location["longitude"] as! CLLocationDegrees)
-           // let span = 2.0 * spanRadius
-           // let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: span, longitudinalMeters: span)
-           // mapView.setRegion(region, animated: animated)
            mapView.addAnnotation(annotation)
             
             

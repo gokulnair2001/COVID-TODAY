@@ -47,6 +47,8 @@ struct caseManager {
         }
     }
     
+    //MARK:- Parsing the data
+    
     func parseJSON(_ stats: Data)-> caseModel?{
         let decoder = JSONDecoder()
         do{
