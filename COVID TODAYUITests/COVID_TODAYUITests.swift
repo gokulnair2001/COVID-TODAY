@@ -23,7 +23,7 @@ class COVID_TODAYUITests: XCTestCase {
     }
 
     func testExample() throws {
-        // UI tests must launch the application that they test.
+        // UI tests must launch the application that they
         let app = XCUIApplication()
         app.launch()
 
