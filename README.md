@@ -58,7 +58,7 @@ The app consists of 4 main option:
 
 # Snapshots of App 📸
 
-![Untitled design-4](https://user-images.githubusercontent.com/56252259/94921826-ac96ab80-04d6-11eb-8824-6507b32c47c9.png)
+![Untited design-4](https://user-images.githubusercontent.com/56252259/94921826-ac96ab80-04d6-11eb-8824-6507b32c47c9.png)
 
 # Key Features 🔐
 * Smart map view
