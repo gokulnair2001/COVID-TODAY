@@ -11,6 +11,8 @@ import MapKit
 
 class MainViewController: UIViewController {
     
+    //MARK:- Outlets
+    
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var examineButton: UIButton!
     @IBOutlet weak var HospitalseButton: UIButton!
@@ -35,6 +37,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var view6: UIView!
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    //MARK:- Delegates
     
     let haptic = haptickFeedback()
     
@@ -67,9 +71,12 @@ class MainViewController: UIViewController {
         applyShadow(yourView: view6)
         
         mapMarker(locations: mapCoordinates.annotations)
-        manager.performURL()
+       // manager.performURL()
         
     }
+    
+    //MARK:- Actions
+    
     @IBAction func profileBtn(_ sender: Any) {
         buttonAnimation(button: profileButton)
         performSegue(withIdentifier: "Profile", sender: nil)

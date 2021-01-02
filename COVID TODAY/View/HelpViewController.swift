@@ -57,7 +57,7 @@ class HelpViewController: UIViewController {
 
 extension HelpViewController{
     func uialertContol(){
-        let alert = UIAlertController(title: "Error", message: "Currently not available", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Coming Soon", message: "Currently not available", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
         present(alert, animated: true, completion: nil)
