@@ -24,7 +24,7 @@ class DatabaseHelper{
         do{
             try context?.save()
         }catch{
-            print("error found, data not saved")
+            print("error found")
         }
     }
 }
