@@ -57,7 +57,7 @@ extension DiagnoseViewController{
         
         var inputImage = [COVIDDetectorInput]()
         
-        if let image = xrayImage.image{
+        if let images = xrayImage.image{
            let newImage =  buffer(from: xrayImage.image!)
             let imageForClassification = COVIDDetectorInput(image: newImage!)
             inputImage.append(imageForClassification)

@@ -806,10 +806,10 @@
             </objects>
             <point key="canvasLocation" x="-771.01449275362324" y="841.74107142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Hospital View Controller-->
         <scene sceneID="Cpu-Wi-RVr">
             <objects>
-                <viewController id="skC-mM-7if" sceneMemberID="viewController">
+                <viewController id="skC-mM-7if" customClass="HospitalViewController" customModule="COVID_TODAY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zw1-is-2ba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

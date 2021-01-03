@@ -10,6 +10,7 @@
 		5502EA0B2525B40F00D8BCAF /* SymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502EA0A2525B40F00D8BCAF /* SymptomsViewController.swift */; };
 		5502EA102525BB7A00D8BCAF /* stepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502EA0F2525BB7900D8BCAF /* stepsViewController.swift */; };
 		5502EA152526F94800D8BCAF /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502EA142526F94800D8BCAF /* HapticFeedback.swift */; };
+		55128AE225A19CF500223B45 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55128AE125A19CF500223B45 /* HospitalViewController.swift */; };
 		5518AD0825234CCE00A7A102 /* COVIDDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5518AD0725234CCE00A7A102 /* COVIDDetector.mlmodel */; };
 		5518AD1E25235E1A00A7A102 /* DiagnoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5518AD1D25235E1A00A7A102 /* DiagnoseViewController.swift */; };
 		5518AD23252362D100A7A102 /* PositiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5518AD22252362D100A7A102 /* PositiveViewController.swift */; };
@@ -58,6 +59,7 @@
 		5502EA0A2525B40F00D8BCAF /* SymptomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SymptomsViewController.swift; path = "COVID TODAY/VIEW/SymptomsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5502EA0F2525BB7900D8BCAF /* stepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = stepsViewController.swift; path = "COVID TODAY/VIEW/stepsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5502EA142526F94800D8BCAF /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HapticFeedback.swift; path = "COVID TODAY/HapticFeedback.swift"; sourceTree = SOURCE_ROOT; };
+		55128AE125A19CF500223B45 /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HospitalViewController.swift; path = "COVID TODAY/View/HospitalViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5518AD0725234CCE00A7A102 /* COVIDDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = COVIDDetector.mlmodel; sourceTree = "<group>"; };
 		5518AD1D25235E1A00A7A102 /* DiagnoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiagnoseViewController.swift; path = "COVID TODAY/VIEW/DiagnoseViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5518AD22252362D100A7A102 /* PositiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PositiveViewController.swift; path = "COVID TODAY/VIEW/PositiveViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -213,6 +215,7 @@
 		551A3FD82523484B00BF08B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55128AE125A19CF500223B45 /* HospitalViewController.swift */,
 				5502EA0F2525BB7900D8BCAF /* stepsViewController.swift */,
 				5502EA0A2525B40F00D8BCAF /* SymptomsViewController.swift */,
 				552DBE452524FEA4001BD23C /* HelpViewController.swift */,
@@ -449,6 +452,7 @@
 				552DBE462524FEA4001BD23C /* HelpViewController.swift in Sources */,
 				5518AD0825234CCE00A7A102 /* COVIDDetector.mlmodel in Sources */,
 				55E85C5B252489D600CFD7CD /* User+CoreDataProperties.swift in Sources */,
+				55128AE225A19CF500223B45 /* HospitalViewController.swift in Sources */,
 				5502EA0B2525B40F00D8BCAF /* SymptomsViewController.swift in Sources */,
 				5518AD23252362D100A7A102 /* PositiveViewController.swift in Sources */,
 				5502EA152526F94800D8BCAF /* HapticFeedback.swift in Sources */,
