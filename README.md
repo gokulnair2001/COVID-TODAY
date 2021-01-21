@@ -77,15 +77,6 @@ MIT License<br> Please read the [License](https://github.com/gokulnair2001/COVID
 * If you face issues in any step open a new issue.
 * To fix issues: Fork this repository, make your changes and make a Pull Request. 
 
-# Like the Project ?
-If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://www.linkedin.com/in/gokul-r-nair/)🥰
-
-[<img width="200" alt="BMC logo+wordmark - Black" src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png">](https://www.buymeacoffee.com/gokulnair)
-
-OR
-
-**Drop a star ⭐ if you find this project interesting!**
-
 # Imortant Message ✉️
 
 * Still there are things to complete as well as to implement, If you find this app intresting than hit me up; I will be
@@ -94,6 +85,15 @@ glad to work with you.
 # Credits ⭐️
 * ML Model Dataset credits :[kaggle](https://www.kaggle.com/datasets) 
 glad to work with you.
+
+# Like the Project ?
+If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://www.linkedin.com/in/gokul-r-nair/)🥰
+
+[<img width="200" alt="BMC logo+wordmark - Black" src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png">](https://www.buymeacoffee.com/gokulnair)
+
+OR
+
+**Drop a star ⭐ if you find this project interesting!**
 
 <p align="center" width="100%">
    Made with ❤️ in 🇮🇳 By Gokul Nair   
