@@ -26,7 +26,7 @@ struct Provider: IntentTimelineProvider {
         
         loader.get()
         print("widget")
-        if (loader.fTotalDeaths.count != 0){
+        if (loader.dataFetched == true){
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         let entry = COVIDEntry.mockEntry()

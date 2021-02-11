@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
     var fTotalConfirmed:[Double] = [0.0]
     var fNewDeath:[Double] = [0.0]
     var fNewRecovered:[Double] = [0.0]
-    var fTotalRecovered:[Double] = []
+    var fTotalRecovered:[Double] = [0.0]
     var fDate:[String] = [""]
     
     let mapCoordinates = coordinates()
@@ -243,13 +243,13 @@ extension MainViewController{
     
     @objc func updateUI(){
         if (dataFetched){
-            
+    
         self.totalDeathLbl.text = String(fTotalDeaths[0])
         self.newDeaths.text = String(fNewDeath[0])
-        
+
         self.totalCases.text = String(fTotalConfirmed[0])
         self.newCases.text = String(fNewConfirmed[0])
-        
+
         self.totalRecovery.text = String(fTotalRecovered[0])
         self.newRecovery.text = String(fNewRecovered[0])
         self.date.text = String(fDate[0])

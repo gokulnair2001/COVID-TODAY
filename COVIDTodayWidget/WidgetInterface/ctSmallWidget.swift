@@ -17,13 +17,7 @@ struct ctSmallWidget: View {
     init(_covidToday: coronaData) {
         self.covidToday = _covidToday
     }
-    
-    //    init(_covidToday: MainViewController) {
-    //        self.fetchedData = _covidToday
-    //    }
-    //
     var body: some View {
-        
         ZStack{
             HStack(spacing: 0){
                 Color.widgetBg
@@ -36,7 +30,7 @@ struct ctSmallWidget: View {
             }
             VStack(){
                 Divider()
-                Text("World Wide Stats").font(.system(size: 15)).bold()
+                Text("World Wide Stats").font(.system(size: 15)).bold().position(x: 80,y: 20).foregroundColor(.orange)
                 Spacer()
             }
             HStack{
