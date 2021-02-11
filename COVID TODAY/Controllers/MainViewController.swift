@@ -36,15 +36,20 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    let haptic = haptickFeedback()
+    var fTotalDeaths:[Double] = [0.0]
+    var fNewConfirmed:[Double] = [0.0]
+    var fTotalConfirmed:[Double] = [0.0]
+    var fNewDeath:[Double] = [0.0]
+    var fNewRecovered:[Double] = [0.0]
+    var fTotalRecovered:[Double] = []
+    var fDate:[String] = [""]
     
     let mapCoordinates = coordinates()
     
-    var manager = caseManager()
+    let haptic = haptickFeedback()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
@@ -52,7 +57,8 @@ class MainViewController: UIViewController {
             present(vc, animated: true)
         }
         
-        manager.delegate = self //never forget this line....very imp
+        
+        get()
         
         mapView.overrideUserInterfaceStyle = .light
         mapView.layer.cornerRadius = 20
@@ -67,7 +73,6 @@ class MainViewController: UIViewController {
         applyShadow(yourView: view6)
         
         mapMarker(locations: mapCoordinates.annotations)
-        manager.performURL()
         
     }
     @IBAction func profileBtn(_ sender: Any) {
@@ -93,7 +98,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func relodeDataBtn(_ sender: Any) {
-        manager.performURL()
+        get()
         haptic.haptiFeedback1()
     }
     
@@ -105,8 +110,7 @@ extension MainViewController
 {
     func buttonAnimation(button: UIButton){
         UIView.animate(withDuration: 0.6,
-                       animations: { button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-                       },
+                       animations: { button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6) },
                        completion: { _ in
                         UIView.animate(withDuration: 0.6) {button.transform = CGAffineTransform.identity
                         }
@@ -115,37 +119,7 @@ extension MainViewController
 }
 
 
-//MARK:- API calls
 
-extension MainViewController: CoronaCaseManagerDelegate{
-    
-    func didUpdateStats(_ caseManager: caseManager, stats: caseModel) {
-        
-        DispatchQueue.main.async {
-            
-            self.totalDeathLbl.text = String(stats.tDeaths)
-            self.newDeaths.text = String(stats.nDeaths)
-            
-            self.totalCases.text = String(stats.tCase)
-            self.newCases.text = String(stats.nCase)
-            
-            self.totalRecovery.text = String(stats.tRecovery)
-            self.newRecovery.text = String(stats.nRecovery)
-            
-            self.date.text = stats.time
-            
-        }
-        
-    }
-    
-    func didFailWithError(error: Error) {
-        let alertControl = UIAlertController(title:"Error", message: "Enter Correct Place", preferredStyle: .actionSheet)
-        alertControl.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        self.present(alertControl, animated: true,completion: nil)
-    }
-    
-    
-}
 
 //MARK:- UIView shadow effect
 
@@ -165,10 +139,7 @@ extension MainViewController{
         for location in locations {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude: location["longitude"] as! CLLocationDegrees)
-           // let span = 2.0 * spanRadius
-           // let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: span, longitudinalMeters: span)
-           // mapView.setRegion(region, animated: animated)
-           mapView.addAnnotation(annotation)
+            mapView.addAnnotation(annotation)
             
             
         }
@@ -191,4 +162,111 @@ class core{
     }
 }
 
+//MARK:- GET DATA METHOD
 
+extension MainViewController{
+    func get(){
+        let request = URLRequest(url: URL(string: "https://api.covid19api.com/summary")!,timeoutInterval: Double.infinity)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    
+                    if response.statusCode == 400 {
+                        DispatchQueue.main.async {
+                            self.extraTrial()
+                        }
+                    }else if response.statusCode == 401{
+                        DispatchQueue.main.async {
+                            self.alertView()
+                        }
+                    }else if response.statusCode == 403{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
+                        
+                    }else if response.statusCode == 503{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
+                    }
+                    return
+                }
+            }
+            
+            self.fTotalRecovered.removeAll()
+            self.fTotalConfirmed.removeAll()
+            self.fTotalDeaths.removeAll()
+            self.fNewDeath.removeAll()
+            self.fNewRecovered.removeAll()
+            self.fNewConfirmed.removeAll()
+            self.fDate.removeAll()
+            
+            do{
+                if error == nil{
+                    let result = try JSONDecoder().decode(coronaData.self, from: data)
+                    
+                    self.fNewConfirmed.append(result.Global.NewConfirmed)
+                    self.fNewRecovered.append(result.Global.NewRecovered)
+                    self.fNewDeath.append(result.Global.NewDeaths)
+                    self.fTotalDeaths.append(result.Global.TotalDeaths)
+                    self.fTotalConfirmed.append(result.Global.TotalConfirmed)
+                    self.fTotalRecovered.append(result.Global.TotalRecovered)
+                    self.fDate.append(result.Date)
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    self.updateUI()
+                }
+                
+            }catch{
+                print("Error found")
+            }
+        }
+        task.resume()
+        
+    }
+}
+
+// UI UPDATION METHOD
+
+extension MainViewController{
+    
+    @objc func updateUI(){
+        if (fTotalDeaths.count != 0){
+        self.totalDeathLbl.text = String(fTotalDeaths[0])
+        self.newDeaths.text = String(fNewDeath[0])
+        
+        self.totalCases.text = String(fTotalConfirmed[0])
+        self.newCases.text = String(fNewConfirmed[0])
+        
+        self.totalRecovery.text = String(fTotalRecovered[0])
+        self.newRecovery.text = String(fNewRecovered[0])
+        self.date.text = String(fDate[0])
+        }
+        
+        
+    }
+    
+    func alertView() {
+        let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+    func extraTrial() {
+        let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func serverError() {
+        let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+}

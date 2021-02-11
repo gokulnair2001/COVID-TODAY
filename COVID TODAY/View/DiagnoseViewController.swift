@@ -9,12 +9,15 @@ import UIKit
 import CoreML
 
 class DiagnoseViewController: UIViewController {
+    
+    //MARK:- Outlets
 
     @IBOutlet weak var xrayImage: UIImageView!
     @IBOutlet weak var imagelabel: UILabel!
     
-    let covidDetector = COVIDDetector()
+    //MARK:- Delegates
     
+    let covidDetector = COVIDDetector()
     let haptic = haptickFeedback()
     
     override func viewDidLoad() {
@@ -24,6 +27,8 @@ class DiagnoseViewController: UIViewController {
        // xrayImage.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
     
+    //MARK:- Action Outlets
+    
     @IBAction func addXRay(_ sender: Any) {
         imageSelectionMode()
     }
@@ -32,6 +37,7 @@ class DiagnoseViewController: UIViewController {
         haptic.haptiFeedback1()
     }
     @IBAction func examineBtn(_ sender: Any) {
+       
         imageClassifier()
         haptic.haptiFeedback1()
     }
@@ -51,7 +57,6 @@ extension DiagnoseViewController{
             let imageForClassification = COVIDDetectorInput(image: newImage!)
             inputImage.append(imageForClassification)
         }
-        
         do {
             let prediction = try self.covidDetector.predictions(inputs: inputImage)
             

@@ -9,7 +9,7 @@ import Foundation
 import AVKit
 
 class haptickFeedback {
-
+    
     func haptiFeedback1() {
   //print("haptick done")
   let generator = UINotificationFeedbackGenerator()
