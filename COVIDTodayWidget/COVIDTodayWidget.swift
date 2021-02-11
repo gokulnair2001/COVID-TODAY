@@ -9,13 +9,21 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-
-
 struct COVIDTodayWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
+    @Environment(\.widgetFamily) var family
+    
+    @ViewBuilder
     var body: some View {
-        Text(entry.date, style: .time)
+        switch family {
+        case .systemSmall:
+            ctSmallWidget(_covidToday: entry.cases.first!)
+        case .systemMedium:
+            ctMediumWidget()
+        default:
+            fatalError()
+        }
     }
 }
 

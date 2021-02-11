@@ -36,6 +36,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var dataFetched:Bool = false
+    
     var fTotalDeaths:[Double] = [0.0]
     var fNewConfirmed:[Double] = [0.0]
     var fTotalConfirmed:[Double] = [0.0]
@@ -219,7 +221,7 @@ extension MainViewController{
                     self.fTotalConfirmed.append(result.Global.TotalConfirmed)
                     self.fTotalRecovered.append(result.Global.TotalRecovered)
                     self.fDate.append(result.Date)
-                    
+                    self.dataFetched = true
                 }
                 
                 DispatchQueue.main.async {
@@ -240,7 +242,8 @@ extension MainViewController{
 extension MainViewController{
     
     @objc func updateUI(){
-        if (fTotalDeaths.count != 0){
+        if (dataFetched){
+            
         self.totalDeathLbl.text = String(fTotalDeaths[0])
         self.newDeaths.text = String(fNewDeath[0])
         
@@ -250,9 +253,8 @@ extension MainViewController{
         self.totalRecovery.text = String(fTotalRecovered[0])
         self.newRecovery.text = String(fNewRecovered[0])
         self.date.text = String(fDate[0])
+        
         }
-        
-        
     }
     
     func alertView() {
