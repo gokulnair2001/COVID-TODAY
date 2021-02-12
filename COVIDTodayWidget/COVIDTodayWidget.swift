@@ -20,7 +20,7 @@ struct COVIDTodayWidgetEntryView : View {
         case .systemSmall:
             ctSmallWidget(_covidToday: entry.cases.first!)
         case .systemMedium:
-            ctMediumWidget()
+            ctMediumWidget(_covidToday: entry.cases.first!)
         default:
             fatalError()
         }
@@ -35,8 +35,8 @@ struct COVIDTodayWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             COVIDTodayWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My COVID Today Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("COVID Case Statistics")
+        .description("Shows World wide COVID case statistics")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

@@ -244,14 +244,14 @@ extension MainViewController{
     @objc func updateUI(){
         if (dataFetched){
     
-        self.totalDeathLbl.text = String(fTotalDeaths[0])
-        self.newDeaths.text = String(fNewDeath[0])
+        self.totalDeathLbl.text = String(Int(fTotalDeaths[0]))
+        self.newDeaths.text = String(Int(fNewDeath[0]))
 
-        self.totalCases.text = String(fTotalConfirmed[0])
-        self.newCases.text = String(fNewConfirmed[0])
+        self.totalCases.text = String(Int(fTotalConfirmed[0]))
+        self.newCases.text = String(Int(fNewConfirmed[0]))
 
-        self.totalRecovery.text = String(fTotalRecovered[0])
-        self.newRecovery.text = String(fNewRecovered[0])
+        self.totalRecovery.text = String(Int(fTotalRecovered[0]))
+        self.newRecovery.text = String(Int(fNewRecovered[0]))
         self.date.text = String(fDate[0])
         
         }

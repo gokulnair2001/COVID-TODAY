@@ -25,7 +25,6 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         
         loader.get()
-        print("widget")
         if (loader.dataFetched == true){
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
