@@ -29,7 +29,7 @@ struct Provider: IntentTimelineProvider {
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         let entry = COVIDEntry.mockEntry()
-        let entryDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
+        let entryDate = Calendar.current.date(byAdding: .second, value: 10, to: currentDate)!
         let timeline = Timeline(entries: [entry], policy: .after(entryDate))
         completion(timeline)
     }

@@ -35,16 +35,16 @@ struct ctSmallWidget: View {
             }
             HStack{
                 VStack(alignment: .leading, spacing: 15){
-                    Text("Recovered").fontWeight(.bold).font(.system(size: 12))
-                    Text("Confired").fontWeight(.bold).font(.system(size: 12))
-                    Text("Deaths").fontWeight(.bold).font(.system(size: 12))
+                    Text("Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
+                    Text("Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
+                    Text("Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
                 }
                 VStack(alignment: .leading, spacing: 15){
-                    Text("\(covidToday.Global.TotalRecovered)").font(.system(size: 12))
-                    Text("\(covidToday.Global.TotalConfirmed)").font(.system(size: 12))
-                    Text("\(covidToday.Global.TotalDeaths)").font(.system(size: 12))
+                    Text("\(Int(covidToday.Global.TotalRecovered))").font(.system(size: 12)).foregroundColor(.black)
+                    Text("\(Int(covidToday.Global.TotalConfirmed))").font(.system(size: 12)).foregroundColor(.black)
+                    Text("\(Int(covidToday.Global.TotalDeaths))").font(.system(size: 12)).foregroundColor(.black)
                 }
-            }.padding()
+            }.padding().offset(y: +8)
         }
     }
 }

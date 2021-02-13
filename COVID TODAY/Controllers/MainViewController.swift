@@ -37,12 +37,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var dataFetched:Bool = false
+    var appOpened:Bool = false
     
     var fTotalDeaths:[Double] = [0.0]
     var fNewConfirmed:[Double] = [0.0]
     var fTotalConfirmed:[Double] = [0.0]
     var fNewDeath:[Double] = [0.0]
-    var fNewRecovered:[Double] = [0.0]
+    var fNewRecovered:[Double] = [1.0]
     var fTotalRecovered:[Double] = [0.0]
     var fDate:[String] = [""]
     
@@ -52,7 +53,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        appOpened = true
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
             let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
@@ -222,10 +223,13 @@ extension MainViewController{
                     self.fTotalRecovered.append(result.Global.TotalRecovered)
                     self.fDate.append(result.Date)
                     self.dataFetched = true
+                    print("data added")
                 }
                 
                 DispatchQueue.main.async {
-                    self.updateUI()
+                    if (self.appOpened) {
+                        self.updateUI()
+                    }
                 }
                 
             }catch{
