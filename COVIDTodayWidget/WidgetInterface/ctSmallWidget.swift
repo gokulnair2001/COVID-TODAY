@@ -30,20 +30,20 @@ struct ctSmallWidget: View {
             }
             VStack(){
                 Divider()
-                Text("World Wide Stats").font(.system(size: 15)).bold().position(x: 80,y: 20).foregroundColor(.orange)
+                Text("World Wide Stats 🌏").font(.system(size: 13)).bold().position(x: 80,y: 20).foregroundColor(.orange)
                 Spacer()
             }
-            HStack{
+            HStack(alignment: .center){
                 VStack(alignment: .leading, spacing: 15){
-                    Text("Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
-                    Text("Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
-                    Text("Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
+                    Text("Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.green)
+                    Text("Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.blue)
+                    Text("Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.red)
                 }
                 VStack(alignment: .leading, spacing: 15){
                     Text("\(Int(covidToday.Global.TotalRecovered))").font(.system(size: 12)).foregroundColor(.black)
                     Text("\(Int(covidToday.Global.TotalConfirmed))").font(.system(size: 12)).foregroundColor(.black)
                     Text("\(Int(covidToday.Global.TotalDeaths))").font(.system(size: 12)).foregroundColor(.black)
-                }
+                }.padding()
             }.padding().offset(y: +8)
         }
     }

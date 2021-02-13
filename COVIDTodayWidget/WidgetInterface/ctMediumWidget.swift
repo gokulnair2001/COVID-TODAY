@@ -29,15 +29,15 @@ struct ctMediumWidget: View {
             }
             VStack(){
                 Divider()
-                Text("World Wide Cases").font(.system(size: 20)).bold().position(x: 110,y: 23).foregroundColor(.orange)
+                Text("World Wide Cases 🌏").font(.system(size: 20)).bold().position(x: 125,y: 23).foregroundColor(.orange)
                 Spacer()
             }
             HStack(alignment: .center){
                 HStack{
                     VStack(alignment: .leading, spacing: 10){
-                        Text("Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
-                        Text("Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
-                        Text("Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
+                        Text("Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.green)
+                        Text("Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.blue)
+                        Text("Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.red)
                     }.frame(width: 90)
                     
                     
@@ -50,9 +50,9 @@ struct ctMediumWidget: View {
                 
                 HStack{
                     VStack(alignment: .leading, spacing: 10){
-                        Text("T.Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
-                        Text("T.Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
-                        Text("T.Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.black)
+                        Text("T.Recovered").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.green)
+                        Text("T.Confired").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.blue)
+                        Text("T.Deaths").fontWeight(.bold).font(.system(size: 12)).foregroundColor(.red)
                     }.frame(width: 90)
                     
                     VStack(spacing: 10){
