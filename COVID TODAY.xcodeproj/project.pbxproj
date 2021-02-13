@@ -37,7 +37,6 @@
 		55587A6F25D4D0AC004E6952 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502EA142526F94800D8BCAF /* HapticFeedback.swift */; };
 		55587A7425D4D0CD004E6952 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593BCCC252735BC00513E6F /* OnboardingViewController.swift */; };
 		55587A7925D4D0D0004E6952 /* MapCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFAB0B252710FA00DF7659 /* MapCoordinates.swift */; };
-		55587A7F25D500AB004E6952 /* fetchedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55587A7E25D500AB004E6952 /* fetchedData.swift */; };
 		5593BCCD252735BC00513E6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593BCCC252735BC00513E6F /* OnboardingViewController.swift */; };
 		55AC434325242CA5000C988A /* UserProfileDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55AC434125242CA5000C988A /* UserProfileDataModel.xcdatamodeld */; };
 		55AC434B25242F78000C988A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC434A25242F78000C988A /* ProfileViewController.swift */; };
@@ -127,7 +126,6 @@
 		55587A4625D439E3004E6952 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		55587A4D25D43AA2004E6952 /* ctSmallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctSmallWidget.swift; sourceTree = "<group>"; };
 		55587A5325D43AB2004E6952 /* ctMediumWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctMediumWidget.swift; sourceTree = "<group>"; };
-		55587A7E25D500AB004E6952 /* fetchedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchedData.swift; sourceTree = "<group>"; };
 		5593BCCC252735BC00513E6F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "COVID TODAY/View/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55AC434225242CA5000C988A /* UserProfileDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserProfileDataModel.xcdatamodel; sourceTree = "<group>"; };
 		55AC434A25242F78000C988A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "COVID TODAY/VIEW/ProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -255,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				55E0375425249BEF00ABB409 /* CoronaCaseData.swift */,
-				55587A7E25D500AB004E6952 /* fetchedData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,7 +546,6 @@
 				551A3FA32523481400BF08B7 /* MainViewController.swift in Sources */,
 				5518AD1E25235E1A00A7A102 /* DiagnoseViewController.swift in Sources */,
 				55E85C5A252489D600CFD7CD /* User+CoreDataClass.swift in Sources */,
-				55587A7F25D500AB004E6952 /* fetchedData.swift in Sources */,
 				551A3F9F2523481400BF08B7 /* AppDelegate.swift in Sources */,
 				5518AD28252362DA00A7A102 /* NegativeViewController.swift in Sources */,
 				5502EA102525BB7A00D8BCAF /* stepsViewController.swift in Sources */,
