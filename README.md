@@ -69,7 +69,7 @@ The app consists of 4 main option:
 
 # License ⚖️  
 
-MIT License<br> Please read the [License](https://github.com/gokulnair2001/COVID-TODAY/blob/main/LICENSE) file for details.
+MIT License<br> Please read the [License](https://github.com/gokulnair2001/COVID-TODAY/blob/Master/LICENSE) file for details.
 
 # How to Contribute 🖋 
 
