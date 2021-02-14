@@ -36,9 +36,6 @@ extension AddDetailsViewController {
     
     @IBAction func addBtn(_ sender: Any) {
        
-        let dict = ["name":nameTextField.text,"address":addressTextField.text,"pincode":pincodeTextField.text,"number":numberTextield.text]
-        DatabaseHelper.shareInstance.save(object: dict as! [String:String])
-        haptic.haptiFeedback1()
     }
 }
 
