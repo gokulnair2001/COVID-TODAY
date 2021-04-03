@@ -16,7 +16,7 @@ that the app also provides live updates of total cases in world. Even here it do
 The app gives you a desired result with 93% accuracy.
 
 # Inspiration ❤️
-This idea came to my mind when I was thinking of how do covid detection really happens, then i read an article where i found the first tage of COVID detection is done through
+This idea came to my mind when I was thinking of how do covid detection really happens?, then i read an article where i found the first tage of COVID detection is done through
 chest XRay, so i thought why not try to make a ML model which helps to find result. Then when i made the model i thought of making an app which comprises of this feature and the rest
 is here.
 
