@@ -5,7 +5,7 @@
 ![badge](https://img.shields.io/badge/Swift-5.0-red)
 ![badge](https://img.shields.io/badge/iOS-14-blue)
 ![badge](https://img.shields.io/badge/Platfrom-iOS-orange)
-![Badge](https://img.shields.io/badge/COVID-Detection-yellowgreen)
+![Badges](https://img.shields.io/badge/COVID-Detection-yellowgreen)
 ![badge](https://img.shields.io/badge/COVID-LiveUpdates-red)
 ![Badge](https://img.shields.io/badge/COVID-Today-yellowGreen)
 ![Badge](https://img.shields.io/badge/COVID-Precautions-yellow) 
